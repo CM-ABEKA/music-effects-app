@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts.js" defer></script>
+    <script src="audio.js" defer></script>
+    <!-- <script src="domaudio.js" defer></script> -->
+    <style>
+        body{
+            background-color: #DBDBDB;
+        }
+        .container{
+            position: relative;
+            margin: auto;
+            border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .container h1{
+            margin: auto;
+            padding: 10px;
+        }
+        .container audio{
+            position: relative;
+            margin: auto;
+            margin: 10px auto;
+        }
+
+        canvas{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }
+        label{
+            width: 40px;
+            margin: 10px;
+        }
+        .content{
+            display: grid;
+            /* grid-template-columns: auto min-content; */
+            justify-content: center;
+            justify-items: end;
+            align-items: center;
+            gap: 5px 10px;
+        }
+        input{
+            margin: 0;
+        }
+    </style>
+<body>
+    <div class="container">
+        <h1>My Music</h1>
+    <audio src="AUDIO/WAKUABUDIWA - HOLY SWAHILI WORSHIP 3(MP3_128K).mp3" controls></audio>
+    </div>
+    <div class="canvas">
+
+    <canvas id="visualiser"></canvas>
+</div>
+<div class="content">
+    <div class="grid">
+        <label for="volume">Volume</label>
+        <input type="range" min="0" max="1" value=".5" step=".01" id="volume">
+    </div>
+    <div class="grid">
+        <label for="bass">Bass</label>
+        <input type="range" min="-10" max="10" value="0" step="1" id="bass">
+    </div>
+    <div class="grid">
+        <label for="mid">Mid</label>
+        <input type="range" min="-10" max="10" value="0" step="1" id="mid">
+    </div>
+    <div class="grid">
+        <label for="treble">Treble</label>
+        <input type="range" min="-10" max="10" value="0" step="1" id="treble">
+    </div>
+    </div>
+</div>
+    
+</body>
+</html> 
