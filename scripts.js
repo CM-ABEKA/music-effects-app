@@ -30,7 +30,7 @@ const trebleEQ = new BiquadFilterNode(context, {
   gain: treble.value,
 });
 
-//setupContext()
+setupContext()
 resize();
 drawVisualiser();
 
